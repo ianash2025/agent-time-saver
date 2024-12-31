@@ -1,7 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// import "./form.css";
+import "@/ContactForm";
 import Script from "next/script";
 import Navbar from "@/Navbar";
+import Footer from "@/Footer";
+import ContactForm from "@/ContactForm";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,13 +25,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-cover bg-center`}
+        className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-screen antialiased bg-cover bg-center`}
         style={{ backgroundImage: "url('./HeroImage.jpg)" }}
       >
         <Navbar />
-        {children}
+        <main className="flex-grow">{children}</main>
+        <ContactForm />
+        <Footer />
       </body>
-      <Script async data-uid="8edba3355a" src="https://appraiser-time-saver.kit.com/8edba3355a/index.js" />
     </html>
   );
 }
