@@ -14,6 +14,9 @@ export default function Navbar() {
           <Link href="/contact" className="text-white hover:underline p-4 text-lg">
             <p>Contact Us</p>
           </Link>
+          <Link href="/services" className="text-white hover:underline p-4 text-lg">
+            <p>Services</p>
+          </Link>
         </div>
       </div>
     </nav>
