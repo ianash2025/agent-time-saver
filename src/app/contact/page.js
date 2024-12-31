@@ -1,6 +1,6 @@
 "use client"; // Required for state management in the App Router
 import { useState } from "react";
-
+import Script from "next/script";
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
@@ -16,9 +16,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+        <h1 className="text-2xl text-black font-bold mb-4">Contact Us</h1>
+        <p className="text-black mb-4">
+          Receive a FREE training audio on best MLS/Square Footage practices when you sign up for our email list! This
+          information can save you thousands of dollars.
+        </p>
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
             Name
