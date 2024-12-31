@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-2xl text-black font-bold mb-4">Contact Us</h1>
+        <h1 className="text-2xl text-black font-bold mb-4">Contact Us DON'T USE THIS ONE</h1>
         <p className="text-black mb-4">
           Receive a FREE training audio on best MLS/Square Footage practices when you sign up for our email list! This
           information can save you thousands of dollars.

@@ -34,12 +34,12 @@ const ContactForm = () => {
       }'
       >
         {/* Header */}
-        <div className=" text-black text-xl font-bold mb-4" data-element="header">
-          <h2>Contact Us</h2>
+        <div data-element="header">
+          <h2 className="text-2xl text-black font-bold mb-4">Contact Us(USE THIS ONE)</h2>
         </div>
 
         {/* Subheader */}
-        <div className="text-base mb-4 text-black" data-element="subheader">
+        <div className="text-black mb-4" data-element="subheader">
           <p>Receive a FREE training audio on best MLS/Square Footage practices when you sign up for our email list!</p>
           <p>This information can save you thousands of dollars.</p>
         </div>
@@ -49,18 +49,18 @@ const ContactForm = () => {
 
         {/* Fields */}
         <div data-element="fields" data-stacked="true" className="space-y-4">
-          <div className="formkit-field">
+          <div style={{ paddingBottom: "1.5rem" }}>
             <input
-              className="formkit-input w-full p-2 border border-gray-300 rounded-lg"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               aria-label="First Name"
               name="fields[first_name]"
               placeholder="First Name"
               type="text"
             />
           </div>
-          <div className="formkit-field">
+          <div style={{ paddingBottom: "1.5rem" }}>
             <input
-              className="formkit-input w-full p-2 border border-gray-300 rounded-lg"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               name="email_address"
               aria-label="Email Address"
               placeholder="Email Address"
@@ -70,7 +70,7 @@ const ContactForm = () => {
           </div>
           <button
             data-element="submit"
-            className=" bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 text-black"
+            className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none mb-4"
           >
             <span>Subscribe</span>
           </button>
