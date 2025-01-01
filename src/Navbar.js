@@ -5,9 +5,12 @@ export default function Navbar() {
     <nav className=" flex  bg-blue-600 p-4 shadow-md">
       <div className=" w-full container mx-auto">
         <Link href="/">
-          <h1 className="text-white text-4xl font-bold">Agent Time Saver</h1>
+          <h1 className="text-4xl font-bold text-black text-center mb-6">Agent Time Saver</h1>
         </Link>
-        <div className="flex  justify-center">
+        <p className="text-lg text-center text-black mb-8">
+          Your solution to accurate property measurements and MLS listings
+        </p>
+        <div className="flex justify-center">
           <Link href="/about">
             <p className="text-white hover:underline text-lg p-4">About Us</p>
           </Link>

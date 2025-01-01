@@ -1,9 +1,10 @@
+import ContactForm from "@/ContactForm";
 import Link from "next/link";
 import Script from "next/script";
 
 export default function About() {
   return (
-    <div className="min-h-screen x flex items-center justify-center p-4">
+    <div className="min-h-screen flex-col flex items-center justify-center p-4">
       <div className="max-w-7xl bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-3xl text-black font-bold mb-4">AGENT TIME SAVER</h1>
         <p className="text-lg text-black mb-4">
@@ -71,6 +72,7 @@ export default function About() {
           To see all of our services we offer please head to our <Link href="/services">services page</Link>
         </p>
       </div>
+      <ContactForm title={"Sign Up Now"} width={"w-full"} maxWidth={"max-w-7xl"} />
     </div>
   );
 }

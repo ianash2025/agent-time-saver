@@ -2,10 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import "./form.css";
 import "@/ContactForm";
-import Script from "next/script";
 import Navbar from "@/Navbar";
 import Footer from "@/Footer";
-import ContactForm from "@/ContactForm";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,7 +28,6 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         <main className="flex-grow">{children}</main>
-        <ContactForm />
         <Footer />
       </body>
     </html>
