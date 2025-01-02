@@ -65,17 +65,16 @@ body {
   background: #d3fbeb;
   border-color: #10bf7a;
   color: #0c905c;
-  margin-bottom: 10px;
-  padding-left: 1.5em;
 }
 .formkit-alert-error {
   background: #fde8e2;
   border-color: #f2643b;
   color: #ea4110;
-  margin-bottom: 10px;
-  padding-left: 1.5em;
 }
-
+.formkit-alert {
+  margin-bottom: 10px;
+  text-align: center;
+}
 .formkit-guarantee {
   @apply text-black text-center my-4 text-lg;
 }
