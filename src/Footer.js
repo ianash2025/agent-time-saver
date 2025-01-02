@@ -1,6 +1,6 @@
 export default function Footer(params) {
   return (
-    <footer className="footer-container bg-gray-100">
+    <footer className="footer-container">
       <div className="footer-content">
         <p>Contact Us</p>
         <p>
@@ -9,6 +9,7 @@ export default function Footer(params) {
         <p>
           Email: <a href="mailto:agenttimesaver1@gmail.com">agenttimesaver1@gmail.com</a>
         </p>
+        <p className="copyright">&copy; Agent Time Saver 2025</p>
       </div>
     </footer>
   );

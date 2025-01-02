@@ -1,11 +1,10 @@
 import ContactForm from "@/ContactForm";
 import Link from "next/link";
-import Script from "next/script";
 
 export default function About() {
   return (
     <div className="min-h-screen flex-col flex items-center justify-center p-4">
-      <div className="max-w-7xl bg-white p-6 rounded-lg shadow-md">
+      <div className="about-content">
         <h1 className="text-3xl text-black font-bold mb-4">AGENT TIME SAVER</h1>
         <p className="text-lg text-black mb-4">
           Get fast, accurate measurements on the properties you&apos;re listing and selling for MAXIMUM value for your

@@ -16,12 +16,12 @@ const ContactForm = ({ title, minH, width, maxWidth }) => {
   //   return () => document.removeEventListener("click", handleClick);
   // });
   return (
-    <div className={`${minH ? minH : ""} flex items-center justify-center p-4 ${width ? width : ""}`}>
+    <div className={`${minH ? minH : ""} flex items-center justify-center p-4 ${width ? "w-full" : ""}`}>
       <Script src="https://f.convertkit.com/ckjs/ck.5.js" />
       {!showDownload ? (
         <form
           action="https://app.kit.com/forms/7513369/subscriptions"
-          className={`${maxWidth ? maxWidth : "max-w-md"} bg-white p-6 rounded-lg shadow-md w-full `}
+          className={`${maxWidth ? "max-w-7xl" : "max-w-md"} bg-white p-6 rounded-lg shadow-md w-full `}
           data-sv-form="7513369"
           data-uid="e21b9c7e49"
           data-format="inline"
@@ -47,10 +47,10 @@ const ContactForm = ({ title, minH, width, maxWidth }) => {
       }'
         >
           <div data-element="header">
-            <h2 className="text-2xl text-black font-bold text-center">{title ? title : "Contact Us"}</h2>
+            <h2 className="form-title">{title ? title : "Contact Us"}</h2>
           </div>
 
-          <div className="text-black mb-7 text-center" data-element="subheader">
+          <div className="form-subheader" data-element="subheader">
             <p className="p-4">
               Receive a FREE training audio on best MLS/Square Footage practices when you sign up for our email list!
             </p>
@@ -59,19 +59,19 @@ const ContactForm = ({ title, minH, width, maxWidth }) => {
 
           <ul className="formkit-alert formkit-alert-error text-red-600" data-element="errors" data-group="alert"></ul>
 
-          <div data-element="fields" data-stacked="true" className="space-y-4">
-            <div style={{ paddingBottom: "1.5rem" }}>
+          <div data-element="fields" data-stacked="true" className="fields-container">
+            <div>
               <input
-                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 text-black focus:ring-blue-400"
+                className="form-input"
                 aria-label="First Name"
                 name="fields[first_name]"
                 placeholder="First Name"
                 type="text"
               />
             </div>
-            <div style={{ paddingBottom: "1.5rem" }}>
+            <div>
               <input
-                className="w-full p-3 border rounded-lg focus:outline-none text-black focus:ring-2 focus:ring-blue-400"
+                className="form-input"
                 name="email_address"
                 aria-label="Email Address"
                 placeholder="Email Address"
@@ -79,15 +79,11 @@ const ContactForm = ({ title, minH, width, maxWidth }) => {
                 type="email"
               />
             </div>
-            <button
-              id="submit-button"
-              data-element="submit"
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none mb-4"
-            >
+            <button id="submit-button" data-element="submit" className="primary-button">
               <span>Subscribe</span>
             </button>
           </div>
-          <div className="formkit-guarantee text-black text-center text-sm mt-4" data-element="guarantee">
+          <div className="formkit-guarantee" data-element="guarantee">
             <p>We won't send you spam. Unsubscribe at any time.</p>
           </div>
         </form>
