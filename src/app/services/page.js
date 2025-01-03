@@ -1,9 +1,10 @@
+import ContactForm from "@/ContactForm";
 import Link from "next/link";
 import Script from "next/script";
 export default function Services() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-10">
-      <div className="max-w-7xl bg-white p-10 rounded-lg shadow-md">
+    <div className="min-h-screen flex items-center justify-center p-10 flex-col">
+      <div className="max-w-7xl bg-white p-10 rounded-lg shadow-md mb-10">
         <div>
           <h2 className="text-5xl text-black mb-7"> Services</h2>
           <p className="text-lg text-black mb-12">
@@ -31,6 +32,7 @@ export default function Services() {
           </p>
         </div>
       </div>
+      <ContactForm title={"Sign Up Now"} width={"w-full"} maxWidth={"max-w-7xl"} />
     </div>
   );
 }

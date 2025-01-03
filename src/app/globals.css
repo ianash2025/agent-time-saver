@@ -18,13 +18,63 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('../../public/HeroImage.jpg') !important;
+  background-image: url("../../public/HeroImage.jpg") !important;
   background-size: cover;
   background-position: center;
 }
 
-.my-form {
-  position: absolute;
-  bottom: 30px;
-  height: 200px;
+.about-content {
+  @apply max-w-7xl bg-white p-6 rounded-lg shadow-md;
+}
+.form-input {
+  @apply w-full p-3 border rounded-lg focus:outline-none text-black focus:ring-2 focus:ring-blue-400;
+}
+.form-subheader {
+  @apply text-black mb-7 text-center;
+}
+.fields-container {
+  @apply space-y-4 px-7;
+}
+.nav-title {
+  @apply text-4xl font-bold text-black text-center mb-6;
+}
+.nav-description {
+  @apply text-lg text-center text-black mb-4;
+}
+.primary-button {
+  @apply w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none mb-4;
+}
+.form-title {
+  @apply text-2xl text-black font-bold text-center pt-5;
+}
+.footer-container {
+  @apply bg-gray-100 w-full flex justify-center border-t-2 border-black h-auto py-10;
+}
+
+.nav-links {
+  @apply text-white hover:underline p-4 text-lg;
+}
+
+.copyright {
+  @apply text-black text-lg justify-start flex w-full pl-9;
+}
+.footer-content {
+  @apply text-black text-2xl flex-col flex justify-center w-full items-center;
+}
+.formkit-alert-success {
+  background: #d3fbeb;
+  border-color: #10bf7a;
+  color: #0c905c;
+}
+.formkit-alert-error {
+  background: #fde8e2;
+  border-color: #f2643b;
+  color: #ea4110;
+}
+.formkit-alert {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.formkit-guarantee {
+  @apply text-black text-center my-4 text-lg;
 }
