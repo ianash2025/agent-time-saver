@@ -81,13 +81,13 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gray-50 text-foreground;
   }
 }
 
 @layer components {
   .footer-container {
-      @apply bg-brand-900 text-white py-6;
+      @apply bg-brand-900 text-white py-6 mt-10;
     }
   
     .footer-content {
