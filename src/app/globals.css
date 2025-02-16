@@ -86,10 +86,32 @@
 }
 
 @layer components {
+  .footer-container {
+      @apply bg-brand-900 text-white py-6;
+    }
+  
+    .footer-content {
+      @apply max-w-7xl mx-auto px-6 flex items-center justify-center text-center;
+    }
+  
+    .copyright {
+      @apply text-sm text-brand-100;
+    }
+  .card-container {
+    @apply bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl flex flex-col h-full transition-shadow;
+  }
+  .card-content {
+    @apply p-6 flex-grow;
+  }
   .page-container {
     @apply min-h-screen pt-32;
   }
-
+  .card-badge-container {
+    @apply w-full flex flex-row-reverse justify-between;
+  }
+  .card-badge {
+    @apply px-3 py-1 bg-brand-100 text-brand-600 text-sm font-medium rounded-full h-[30px];
+  }
   .content-wrapper {
     @apply max-w-7xl mx-auto px-4;
   }
@@ -188,7 +210,9 @@
     .form-input {
       @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors;
     }
-  
+    .formkit-alert.formkit-alert-success {
+      @apply inline-flex items-center gap-2 px-4 py-2 bg-brand-100 text-brand-600 rounded-full text-sm font-medium mb-8
+    }
     .form-button {
       @apply w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors font-medium;
     }

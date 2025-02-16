@@ -13,8 +13,8 @@ export default function Services() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Standard Plan */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
-            <div className="p-6">
+          <div className="card-container">
+            <div className="card-content">
               <div className="w-12 h-12 bg-brand-100 rounded-lg flex items-center justify-center mb-4">
                 <Package className="w-6 h-6 text-brand-600" />
               </div>
@@ -40,15 +40,13 @@ export default function Services() {
           </div>
 
           {/* Deluxe Plan */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-brand-600 hover:shadow-xl transition-shadow relative">
-            <div className="absolute top-4 right-4">
-              <span className="px-3 py-1 bg-brand-100 text-brand-600 text-sm font-medium rounded-full">
-                Most Popular
-              </span>
-            </div>
-            <div className="p-6">
-              <div className="w-12 h-12 bg-brand-100 rounded-lg flex items-center justify-center mb-4">
-                <Crown className="w-6 h-6 text-brand-600" />
+          <div className="card-container border-2 border-brand-600 ">
+            <div className="card-content">
+              <div className="card-badge-container">
+                <span className="card-badge">Most Popular</span>
+                <div className="w-12 h-12 bg-brand-100 rounded-lg flex items-center justify-center mb-4">
+                  <Crown className="w-6 h-6 text-brand-600" />
+                </div>
               </div>
               <h3 className="text-2xl font-bold text-brand-900 mb-4">Deluxe</h3>
               <p className="text-gray-600 mb-6">Advanced features and M-Suite integration for growing businesses.</p>
@@ -76,8 +74,8 @@ export default function Services() {
           </div>
 
           {/* Premium Plan */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
-            <div className="p-6">
+          <div className="card-container">
+            <div className="card-content">
               <div className="w-12 h-12 bg-brand-100 rounded-lg flex items-center justify-center mb-4">
                 <Ruler className="w-6 h-6 text-brand-600" />
               </div>

@@ -67,7 +67,7 @@ export default function About() {
           <p className="cta-text">
             See our complete range of services and find the perfect solution for your business.
           </p>
-          <Link href="/contact" className="cta-button group">
+          <Link href="/services" className="cta-button group">
             View Our Services
             <ArrowRight className="cta-button-icon group-hover:translate-x-1" />
           </Link>

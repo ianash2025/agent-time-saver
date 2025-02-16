@@ -1,20 +1,27 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Script from "next/script";
+import { useRouter } from "next/navigation";
 const ContactForm = ({ title, minH, width, maxWidth }) => {
   const [showDownload, setShowDownload] = useState(false);
-
-  // useEffect(() => {
-  //   const handleClick = () => {
-  //     setShowDownload(true);
-  //   };
-  //   const button = document.getElementById("submit-button");
-  //   console.log("🚀 ~ useEffect ~ button:", button);
-  //   if (button) {
-  //     button.addEventListener("click", handleClick);
-  //   }
-  //   return () => document.removeEventListener("click", handleClick);
-  // });
+  const router = useRouter();
+  useEffect(() => {
+    const handleClick = () => {
+      const timeout = setTimeout(() => {
+        if (document.querySelector(".formkit-alert-success")) router.push("/services");
+      }, 3000);
+      console.log(
+        "🚀 ~ timeout ~ document.querySelector('.formkit-alert-success')",
+        document.querySelector(".formkit-alert-success")
+      );
+      return () => clearTimeout(timeout);
+    };
+    const button = document.getElementById("submit-button");
+    if (button) {
+      button.addEventListener("click", handleClick);
+    }
+    return () => document.removeEventListener("click", handleClick);
+  });
   return (
     <div className={`form-container ${minH || ""} ${width ? "w-full" : ""}`}>
       <Script src="https://f.convertkit.com/ckjs/ck.5.js" />

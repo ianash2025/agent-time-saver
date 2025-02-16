@@ -2,54 +2,76 @@
 import { useState } from "react";
 import Image from "next/image";
 import ContactForm from "@/ContactForm";
-import { Construction, Mail, ArrowRight } from "lucide-react";
+import { AudioLines, CheckCircle, ArrowRight } from "lucide-react";
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [showDownload, setShowDownload] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email.trim() !== "" && email.includes("@")) {
-      setShowDownload(true);
-    } else {
-      alert("Please enter a valid email address.");
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
-      <div className="max-w-3xl w-full text-center space-y-8 bg-white rounded-2xl shadow-lg p-8 md:p-12">
-        <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto">
-          <Construction className="w-8 h-8 text-brand-600" />
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Copy */}
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 text-brand-600 rounded-full text-sm font-medium">
+              <AudioLines className="w-4 h-4" />
+              Free Training Audio
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-900">
+              Master MLS Listings Like a Pro
+            </h1>
+
+            <p className="text-xl text-gray-600">
+              Get instant access to our expert guide on creating accurate, compliant, and high-converting MLS listings
+              that stand out in today's market.
+            </p>
+
+            <ul className="space-y-4">
+              {[
+                "Learn the exact measurements required for MLS compliance",
+                "Avoid common mistakes that can cost you time and money",
+                "Get our proven templates for faster, more accurate listings",
+                "Stay updated with the latest regulations and best practices",
+              ].map((benefit) => (
+                <li key={benefit} className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-brand-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex items-center gap-4 text-gray-600">
+              <div className="flex -space-x-2">
+                {[1, 2, 3].map((index) => (
+                  <div
+                    key={index}
+                    className="w-10 h-10 rounded-full bg-brand-100 border-2 border-white flex items-center justify-center"
+                  >
+                    <span className="text-brand-600 text-sm">★</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm">
+                Joined by <span className="font-semibold">1,000+</span> real estate professionals
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column - Form */}
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 focus:border-2 focus:border-brand-600">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-brand-900 mb-3">Get Your Free Training Audio</h2>
+              <p className="text-gray-600">
+                Fill out the form below to receive instant access to our comprehensive MLS listing guide.
+              </p>
+            </div>
+
+            <ContactForm title="Start Mastering MLS Listings" width="w-full" maxWidth="max-w-none" />
+
+            <p className="text-sm text-gray-500 text-center mt-6">
+              Join thousands of successful agents who have transformed their listing process
+            </p>
+          </div>
         </div>
-
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-brand-900">Something Amazing Is Coming</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're working hard to bring you a better experience. In the meantime, leave your contact information and
-            we'll notify you when we launch.
-          </p>
-        </div>
-
-        {/* <div className="w-full max-w-md mx-auto">
-          <ContactForm title="Stay Updated" width="w-full" maxWidth="max-w-md" />
-        </div> */}
-
-        <div className="pt-8 border-t border-gray-100">
-          <p className="text-gray-500">
-            Need immediate assistance? Email us at{" "}
-            <a href="mailto:agenttimesaver1@gmail.com" className="text-brand-600 hover:text-brand-700 font-medium">
-              agenttimesaver1@gmail.com
-            </a>
-          </p>
-        </div>
-      </div>
-
-      {/* Optional: Launch date or progress indicator */}
-      <div className="mt-8 flex items-center gap-2 text-gray-500">
-        <div className="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></div>
-        <span>Launching Soon</span>
       </div>
     </div>
   );
