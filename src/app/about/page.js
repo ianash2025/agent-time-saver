@@ -1,77 +1,78 @@
-import ContactForm from "@/ContactForm";
+import { Users, Ruler, Award, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="min-h-screen flex-col flex items-center justify-center p-4">
-      <div className="about-content">
-        <h1 className="text-3xl text-black font-bold mb-4">AGENT TIME SAVER</h1>
-        <p className="text-lg text-black mb-4">
-          Get fast, accurate measurements on the properties you&apos;re listing and selling for MAXIMUM value for your
-          property!
-        </p>
-        <p className="text-lg text-black mb-4">
-          No more low-ball appraisals that come in below your expectations due to inaccurate MLS data. More home value
-          means more commission for you! Save thousands, and close on properties more quickly.
-        </p>
-        <p className="text-lg text-black mb-4">
-          No more blown deals from misunderstandings about room sizes and gross living area!
-        </p>
-        <p className="text-lg text-black mb-4">
-          Take the math and measurements out of your job so you can focus on the sales.
-        </p>
-        <p className="text-lg text-black mb-4">
-          As an agent, you want to make your MLS listings as attractive as possible.
-        </p>
-        <p className="text-lg text-black mb-4">
-          You want your clients to fully appreciate the beauty and features of a home without even setting foot in it.
-          You want your appraiser to have all the correct information so there are no delays in the appraisal process.
-          And you want all of your property information to be arranged in an easily accessible, digestible way for all
-          involved.{" "}
-        </p>
-        <p className="text-lg text-black mb-4">
-          But sometimes well-intentioned MLS data you input gets misinterpreted or misunderstood. Your clients may be
-          frustrated that a 4-bedroom house you listed was really just 3 bedrooms with a den. Your appraiser may be
-          frustrated that you included below grade finished basement in your total gross living area when in fact that
-          should have been broken out separately.
-        </p>
-        <p className="text-lg text-black mb-4">
-          Misunderstandings like this that may crop up with your clients or appraisers cause unwanted delays in the
-          closing process. They might give your buyer more leverage to significantly lower the asking price, or worse
-          yet, they might kill a deal. And of course, being the agent, you&apos;re on the hook for all of that data your
-          property shows in the MLS.{" "}
-        </p>
-        <p className="text-lg text-black mb-4">
-          Adding to this confusion is the differences in which the order of data appears when you create an MLS listing.
-          Data you input into FlexMLS may be different than what is required in WIREX, for example. Your clients may be
-          in search of features you thought you listed but didn&apos;t, and your appraisers may see missing or
-          incomplete data that might drastically affect the value of the property you&apos;re selling.{" "}
-        </p>
-        <p className="text-lg text-black mb-4">
-          There has to be a better way, and there is. The solution is the services offered by Agent Time Saver. Save
-          yourself the anxiety of making sure property data makes its way into the correct place in an MLS listing,
-          without any inaccurate or incomplete data that might delay the appraisal process or result in a low-ball
-          appraisal that earns you less commission or blows a sale.
-        </p>
-        <p className="text-lg text-black mb-4">
-          By using our simple, digital forms, we ensure you get all of your room measurements, room count and square
-          footage broken out accurately and correctly. No more low-ball appraisals that earn you less commission or kill
-          a deal. No more sudden leverage the buyer has to lower the price because the home has less square footage than
-          you originally thought.
-        </p>
-        <p className="text-lg text-black mb-4">
-          By taking things a step further, you can utilize our service to not only use our forms, but to take care of
-          all of the property measurements for you. Our Agent Time Saver contractors will take all of the headache and
-          math out of measuring rooms and square footage, so you can focus on doing what you do best: selling
-          properties.
-        </p>
-
-        <p className="text-lg text-black mb-4">
-          {" "}
-          To see all of our services we offer please head to our <Link href="/services">services page</Link>
-        </p>
+    <div className="page-container">
+      <div className="content-wrapper">
+        <div className="page-header">
+          <h1 className="page-title">About Agent Time Saver</h1>
+          <p className="page-subtitle">
+            Get fast, accurate measurements on the properties you're listing and selling for MAXIMUM value. No more
+            low-ball appraisals or blown deals due to inaccurate MLS data.
+          </p>
+        </div>
+        <div className="content-grid">
+          <div className="content-section animate-fade-in">
+            <h2 className="section-title">The Challenge</h2>
+            <p className="section-text">
+              As an agent, you want your MLS listings to be as attractive as possible. You want clients to appreciate a
+              home's features without stepping foot in it, and appraisers to have correct information to avoid delays.
+            </p>
+            <p className="section-text">
+              But sometimes MLS data gets misinterpreted. A 4-bedroom house listed might really be 3 bedrooms with a
+              den. Below-grade finished basement space might be incorrectly included in gross living area. These
+              misunderstandings cause unwanted delays and can even kill deals.
+            </p>
+          </div>
+          <div className="content-section animate-fade-in-delay-1">
+            <h2 className="section-title">Our Solution</h2>
+            <p className="section-text">
+              Agent Time Saver provides simple, digital forms to ensure accurate room measurements, room count, and
+              square footage breakdowns. We take the math and measurements out of your job so you can focus on sales.
+            </p>
+            <p className="section-text">
+              Take it a step further - our contractors can handle all property measurements for you. No more headaches
+              with measurements and calculations. Focus on what you do best: selling properties.
+            </p>
+          </div>
+        </div>
+        <div className="stats-grid">
+          {[
+            {
+              icon: Users,
+              stat: "1000+",
+              label: "Happy Agents",
+            },
+            {
+              icon: Ruler,
+              stat: "50K+",
+              label: "Properties Measured",
+            },
+            {
+              icon: Award,
+              stat: "100%",
+              label: "Accuracy Rate",
+            },
+          ].map((item, index) => (
+            <div key={index} className={`stat-card animate-fade-in-delay-${index + 1}`}>
+              <item.icon className="stat-icon" />
+              <div className="stat-value">{item.stat}</div>
+              <div className="stat-label">{item.label}</div>
+            </div>
+          ))}
+        </div>
+        <div className="cta-section animate-fade-in-delay-3">
+          <h2 className="cta-title">Ready to Save Time and Close More Deals?</h2>
+          <p className="cta-text">
+            See our complete range of services and find the perfect solution for your business.
+          </p>
+          <Link href="/contact" className="cta-button group">
+            View Our Services
+            <ArrowRight className="cta-button-icon group-hover:translate-x-1" />
+          </Link>
+        </div>
       </div>
-      <ContactForm title={"Sign Up Now"} width={"w-full"} maxWidth={"max-w-7xl"} />
     </div>
   );
 }
